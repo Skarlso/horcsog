@@ -163,7 +163,7 @@ func (p *Parser) parseFunctionLiteral() ast.Expression {
 }
 
 func (p *Parser) parseFunctionParameters() []*ast.Identifier {
-	identifiers := []*ast.Identifier{}
+	var identifiers []*ast.Identifier
 
 	// handle no parameters
 	if p.peekTokenIs(token.RPAREN) {
@@ -308,7 +308,7 @@ func (p *Parser) parseCallExpression(function ast.Expression) ast.Expression {
 }
 
 func (p *Parser) parseCallArguments() []ast.Expression {
-	args := []ast.Expression{}
+	var args []ast.Expression
 
 	// handle empty arguments
 	if p.peekTokenIs(token.RPAREN) {

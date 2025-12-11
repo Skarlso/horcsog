@@ -17,7 +17,7 @@ func isError(obj object.Object) bool {
 	return obj != nil && obj.Type() == object.ERROR_OBJ
 }
 
-// could this be Generalized?
+// Eval could this be Generalized?
 func Eval(node ast.Node, env *object.Environment) object.Object {
 	// TODO: this walks the AST but why? It just doesn't care what it encounters
 	// as long as we get Int?
